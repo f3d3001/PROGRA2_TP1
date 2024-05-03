@@ -32,9 +32,9 @@
         private void Inicializar()
         {
             frame = 0;
-            viewport = new Viewport(MAPA_ANCHO, MAPA_ALTO); // Agregando punto y coma
+            viewport = new Viewport(MAPA_ANCHO, MAPA_ALTO); 
             habitacion = new Habitacion(MAPA_ANCHO, MAPA_ALTO);
-            jugador = new Personaje(2, 2, '^'); // Mapa no es necesario
+            jugador = new Personaje(2, 2, '^'); 
             misiles = new List<Proyectil>();
             enemigos = new List<Personaje>();
 
@@ -42,9 +42,9 @@
 
             for (int i = 0; i < NUM_ENEMIGOS; i++)
             {
-                int x = filaBase + (i % 3); // Genera el desplazamiento horizontal
-                int y = filaBase + (i / 3); // Genera el desplazamiento vertical
-                enemigos.Add(new Personaje(x, y, '=')); // Añadir un nuevo enemigo
+                int x = filaBase + (i % 3); 
+                int y = filaBase + (i / 3); 
+                enemigos.Add(new Personaje(x, y, '=')); 
             }
 
         }
@@ -53,16 +53,16 @@
         {
             while (true)
             {
-                // Escuchar la entrada del teclado
+                
                 ConsoleKeyInfo? input = null;
                 if (Console.KeyAvailable)
                     input = Console.ReadKey(true);
 
-                // Actualizar Datos
+                
                 ActualizarDatos(input);
 
-                // Dibujar Pantalla
-                DibujarPantalla(); // El método ya no está anidado
+                
+                DibujarPantalla(); 
 
                 System.Threading.Thread.Sleep(1000);
             }
@@ -77,30 +77,30 @@
                 switch (input.Value.Key)
                 {
                     case ConsoleKey.LeftArrow:
-                        if (jugador.x > 1) // Asegurar que el jugador no cruce la pared izquierda
+                        if (jugador.x > 1) 
                             jugador.MoverHacia(-1, 0);
                         break;
                     case ConsoleKey.RightArrow:
-                        if (jugador.x < MAPA_ANCHO - 2) // Evitar cruzar la pared derecha
+                        if (jugador.x < MAPA_ANCHO - 2) 
                             jugador.MoverHacia(1, 0);
                         break;
                     case ConsoleKey.Spacebar:
-                        misiles.Add(new Proyectil(jugador.x, jugador.y - 1)); // Crear un misil
+                        misiles.Add(new Proyectil(jugador.x, jugador.y - 1)); 
                         break;
                 }
             }
 
-            // Mover misiles hacia arriba
+            
             foreach (var misil in misiles.ToList())
             {
                 misil.MoverHacia(0, -1);
 
-                if (misil.y < 0) // Eliminar el misil si sale del mapa
+                if (misil.y < 0) 
                 {
                     misiles.Remove(misil);
                 }
 
-                foreach (var enemigo in enemigos.ToList()) // Eliminar misiles y enemigos que colisionen
+                foreach (var enemigo in enemigos.ToList())
                 {
                     if (misil.x == enemigo.x && misil.y == enemigo.y)
                     {
@@ -114,22 +114,22 @@
 
         private void DibujarPantalla()
         {
-            viewport.LimpiarPantalla(); // Limpiar antes de dibujar
-            habitacion.Dibujar(viewport); // Dibujar paredes y otras estructuras
-            jugador.Dibujar(viewport); // Dibujar el jugador
+            viewport.LimpiarPantalla();
+            habitacion.Dibujar(viewport);
+            jugador.Dibujar(viewport);  
 
-            foreach (var misil in misiles) // Dibujar misiles
+            foreach (var misil in misiles)
             {
                 misil.Dibujar(viewport);
             }
 
-            foreach (var enemigo in enemigos) // Dibujar enemigos
+            foreach (var enemigo in enemigos)
             {
                 enemigo.Dibujar(viewport);
             }
 
-            viewport.MostrarEnPantalla(); // Mostrar todo el contenido
-            Console.WriteLine($"Frame: {frame}"); // Información adicional
+            viewport.MostrarEnPantalla(); 
+            Console.WriteLine($"Frame: {frame}");
         }
     }
 
@@ -149,7 +149,7 @@
             this.dibujo = dibujo;  
         }
 
-        public Personaje(int x, int y, char v)
+        public Personaje(int x, int y, char v)  // SEGUNDO CONSTRUCTOR
         {
             this.x = x;
             this.y = y;
@@ -194,7 +194,7 @@
 
         public void MostrarEnPantalla()
         {
-            // Limpio la consola antes de dibujar el nuevo cuadro
+        
             Console.Clear();
 
             for (int y = 0; y < alto; y++)
@@ -223,13 +223,13 @@
         {
             this.x = x;
             this.y = y;
-            this.dibujo = '|'; // Representación del misil
+            this.dibujo = '|';
         }
 
-        public void MoverHacia(int dx, int dy)
+        public void MoverHacia(int x, int y)
         {
-            this.x += dx;
-            this.y += dy;
+            this.x += x;
+            this.y += y;
         }
 
         public void Dibujar(Viewport viewport)
@@ -249,7 +249,6 @@
 
         public Habitacion(int ancho, int alto)
         {
-            // Inicializo filas
             filas = new List<Fila>();
 
             filas.Add(new FilaBorde(ancho));
