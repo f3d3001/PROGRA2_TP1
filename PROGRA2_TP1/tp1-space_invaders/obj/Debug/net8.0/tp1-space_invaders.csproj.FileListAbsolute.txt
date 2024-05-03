@@ -1,0 +1,15 @@
+C:\Users\fpere\Desktop\tp1_perez-trench\PROGRA2_TP1\tp1-space_invaders\obj\Debug\net8.0\tp1-space_invaders.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fpere\Desktop\tp1_perez-trench\PROGRA2_TP1\tp1-space_invaders\obj\Debug\net8.0\tp1-space_invaders.AssemblyInfoInputs.cache
+C:\Users\fpere\Desktop\tp1_perez-trench\PROGRA2_TP1\tp1-space_invaders\obj\Debug\net8.0\tp1-space_invaders.AssemblyInfo.cs
+C:\Users\fpere\Desktop\tp1_perez-trench\PROGRA2_TP1\tp1-space_invaders\obj\Debug\net8.0\tp1-space_invaders.csproj.CoreCompileInputs.cache
+C:\Users\fpere\Desktop\tp1_perez-trench\PROGRA2_TP1\tp1-space_invaders\obj\Debug\net8.0\tp1-space_invaders.sourcelink.json
+C:\Users\fpere\Desktop\tp1_perez-trench\PROGRA2_TP1\tp1-space_invaders\bin\Debug\net8.0\tp1-space_invaders.exe
+C:\Users\fpere\Desktop\tp1_perez-trench\PROGRA2_TP1\tp1-space_invaders\bin\Debug\net8.0\tp1-space_invaders.deps.json
+C:\Users\fpere\Desktop\tp1_perez-trench\PROGRA2_TP1\tp1-space_invaders\bin\Debug\net8.0\tp1-space_invaders.runtimeconfig.json
+C:\Users\fpere\Desktop\tp1_perez-trench\PROGRA2_TP1\tp1-space_invaders\bin\Debug\net8.0\tp1-space_invaders.dll
+C:\Users\fpere\Desktop\tp1_perez-trench\PROGRA2_TP1\tp1-space_invaders\bin\Debug\net8.0\tp1-space_invaders.pdb
+C:\Users\fpere\Desktop\tp1_perez-trench\PROGRA2_TP1\tp1-space_invaders\obj\Debug\net8.0\tp1-space_invaders.dll
+C:\Users\fpere\Desktop\tp1_perez-trench\PROGRA2_TP1\tp1-space_invaders\obj\Debug\net8.0\refint\tp1-space_invaders.dll
+C:\Users\fpere\Desktop\tp1_perez-trench\PROGRA2_TP1\tp1-space_invaders\obj\Debug\net8.0\tp1-space_invaders.pdb
+C:\Users\fpere\Desktop\tp1_perez-trench\PROGRA2_TP1\tp1-space_invaders\obj\Debug\net8.0\tp1-space_invaders.genruntimeconfig.cache
+C:\Users\fpere\Desktop\tp1_perez-trench\PROGRA2_TP1\tp1-space_invaders\obj\Debug\net8.0\ref\tp1-space_invaders.dll
